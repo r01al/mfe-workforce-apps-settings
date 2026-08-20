@@ -6,4 +6,8 @@ export default (environment: Record<string, unknown>, argv: BuildArguments) => c
 	appDirectory,
 	port: 3006,
 	exposes: { './Settings': './src/Settings' },
+	standalone: {
+		entry: './src/dev.ts',
+		title: 'Workforce Settings',
+	},
 }, environment, argv);
